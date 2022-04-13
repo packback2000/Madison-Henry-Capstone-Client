@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import { renderMatches } from "react-router-dom";
 
 export default class AddPost extends React.Component {
     state = {
@@ -12,10 +11,10 @@ export default class AddPost extends React.Component {
 
 
     handleChange = (event) => {
+        console.log(this)
         this.setState({
             [event.target.name]: event.target.value
         });
-        console.log(this)
     }
 
     redirect = () => {
@@ -30,6 +29,11 @@ export default class AddPost extends React.Component {
               body: this.state.body,
               subject_id: this.props.subject_id
           });
+      }
+
+      handleDelete = () => {
+          let post_id = this.props.post_id
+          axios.delete('http://localhost:5051/posts')
       }
 
       render(){

@@ -1,32 +1,31 @@
 import React from "react";
 import axios from "axios";
-import PostDetails from '../PostDetails/PostDetails';
-import AddPost from "../AddPost";
+import Subject from "../Subject/Subject";
+import './SubjectList.css'
 
-export default class PostList extends React.Component {
+export default class SubjectList extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
             data: [],
             currentSubject: {},
-            subjectDetails: [],
-            subjectID: ''
+            subjectDetails: []
         }
     }
 
-    fetchPostDetails() {
+    fetchSubjectDetails() {
         axios.get('http://localhost:5051/subjects')
         .then((results) => {
             const allData = results.data
             this.setState({
-                data: allData,
+                data: allData
             })
         })
     }
 
     componentDidMount() {
-        this.fetchPostDetails();
+        this.fetchSubjectDetails();
     }
 
     componentWillUnmount() {
@@ -35,21 +34,19 @@ export default class PostList extends React.Component {
 
     render () {
         return (
-            <section className="post-list">
-{this.state.data.map((elem) =>
-                <AddPost 
-                    subject_id={elem.subject_id}
-                    />
-                    )} 
+            <section className="subject-list">
+               
+               <h1>Home</h1>
 
+                <section className="subjects">
                     {this.state.data.map((elem) =>
-                        <PostDetails
+                        <Subject
                             key={elem.subject_id}
-                            subjectID = {elem.subject_id}
-                            subjecttitle={elem.title}
+                            id = {elem.subject_id}
+                            title={elem.title}
                         />
                     )} 
-
+                    </section>
             </section>
         )
     }

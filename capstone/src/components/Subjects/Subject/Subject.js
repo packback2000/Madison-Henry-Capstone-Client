@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Post(props) {
+
+function Subject(props) {
  
     return (
         <section className="individual-subject">
-            <Link className="Subject" to={`/posts/${props.id}`}>
+            <Link className="Subject" to={`/subjects/${props.id}`}>
                 <p className="subject-title" id={props.id}>{props.title}</p>
-                <p>{props.body}</p>
             </Link>
         </section>
     )
 }
 
-export default Post;
+export default Subject;
