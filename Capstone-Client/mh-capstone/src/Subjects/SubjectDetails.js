@@ -1,8 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import GetPosts from "../Posts/CreatePost/GetPosts";
-import CreatePost from "../Posts/CreatePost/CreatePost";
+import '../Styles/SubjectDetails.css';
 
 export default class SubjectDetails extends React.Component {
     constructor(props) {
@@ -36,12 +35,6 @@ export default class SubjectDetails extends React.Component {
                                     <Link to={`/subjects/${info.subject_id}`}>
                                         {info.title}
                                     </Link>
-                                    <GetPosts 
-                                        subject_id = {info.subject_id}
-                                    />
-                                    <CreatePost
-                                        subject_id = {info.subject_id}
-                                    />
                                 </td>
                             </tr>
                     </tbody>

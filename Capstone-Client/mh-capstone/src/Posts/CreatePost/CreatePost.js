@@ -6,7 +6,7 @@ export default class CreatePost extends React.Component {
     state = {
         title: '',
         body: '',
-        subject_id: this.props.subject_id
+        subject_id: ''
     }
 
     handleChange = (event) => {
@@ -36,6 +36,9 @@ export default class CreatePost extends React.Component {
 
     render() {
         return(
+
+            <section>
+
             <form onSubmit={this.handleSubmit}>
 
                 <label>Post Title</label>
@@ -61,6 +64,7 @@ export default class CreatePost extends React.Component {
                 <button onClick={this.handleDelete}>Delete</button>
 
             </form>
+            </section>
         )
     }
     

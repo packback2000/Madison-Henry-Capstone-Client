@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import Comment from "./Comment";
+import CreateComment from "./CreateComments";
 
 export default class CommentList extends React.Component {
     constructor(props) {
@@ -12,8 +13,24 @@ export default class CommentList extends React.Component {
             comment: '',
             body: '',
             comment_id: '',
-            commentDetails: []
+            commentDetails: [], 
+            postBody: '',
+            postTitle: ''
         }
+    }
+
+    fetchPostDetails() {
+        let postData = window.location.pathname.split('/comments')[0]
+        axios
+        .get('http://localhost:5051' + postData)
+        .then((response) => {
+            let postDetails = response.data
+            this.setState({
+                currentPost: postDetails,
+                postBody: postDetails.body,
+                postTitle: postDetails.title
+            })
+        })
     }
 
     fetchCommentDetails() {
@@ -29,16 +46,15 @@ export default class CommentList extends React.Component {
 
     componentDidMount() {
         this.fetchCommentDetails();
-        let postID = this.props.post_id;
+        this.fetchPostDetails();
         axios
-        .get('http://localhost:5051/posts/' + postID + '/comments')
+        .get('http://localhost:5051' + window.location.pathname)
         .then(response => {
             let details = response.data
             this.setState({
                 commentDetails: details
             })
         })
-        console.log(this.state.commentDetails)
     }
 
     componentWillUnmount() {
@@ -48,14 +64,17 @@ export default class CommentList extends React.Component {
     render() {
         return(
             <section className="comment-section">
-                {this.state.commentDetails.map((comment) => {
-                    <div>
+                <p>{this.state.postTitle}</p>
+                <p>{this.state.postBody}</p>
+                <hr/>
+                {this.state.commentDetails.map((comment) => 
                     <Comment 
-                        post_id = {comment.post_id}
                         body = {comment.body}
+                        post_id = {comment.post_id}
                     />
-                    </div>
-                })}
+                )}
+                
+                <CreateComment/>
             </section>
         )
     }

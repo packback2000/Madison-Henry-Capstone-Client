@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Post from '../Post';
+import CreatePost from './CreatePost';
 
 export default class GetPosts extends React.Component {
 
@@ -15,8 +16,20 @@ export default class GetPosts extends React.Component {
             title: '',
             id: '',
             subject: '',
-            body: ''
+            body: '',
+            subject_name: ''
         }
+    }
+
+    fetchSubjectDetails() {
+        axios
+        .get('http://localhost:5051' + window.location.pathname)
+        .then((response) => {
+            let subjectDetails = response.data
+            this.setState({
+                subject_name: subjectDetails.title
+            })
+        })
     }
 
     fetchPostDetails() {
@@ -32,30 +45,22 @@ export default class GetPosts extends React.Component {
 
     componentDidMount() {
         this.fetchPostDetails();
-        let subjectID = this.props.subject_id;
+        this.fetchSubjectDetails();
         axios
-        .get('http://localhost:5051/subjects/' + subjectID + '/posts' )
+        .get('http://localhost:5051' + window.location.pathname + '/posts' )
         .then(response => {
             let details = response.data
             this.setState({
-                postDetails: details
+                postDetails: details,
             })
             })
+            this.setState({
+              subject:  window.location.pathname.split('/')[2], 
+              subject_name: window.location.pathname.split('/')[2]
+            })
+           
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        let subjectID = this.props.subject_id;
-        axios
-        .get('http://localhost:5051/subjects/' + subjectID + '/posts' )
-        .then(response => {
-            let mainPostData = response.data
-            if (prevProps.subject_id !== subjectID) {
-                this.setState({
-                    currentPost: mainPostData,
-                })
-            }
-        })
-        }
 
     componentWillUnmount() {
         console.log('componentWillUnmount');
@@ -63,10 +68,21 @@ export default class GetPosts extends React.Component {
 
     render() {
         return(
-            <section key={this.state.currentSubject.key} className='postList'>
+            <section className='post-list'>
+
+            <p>{this.state.subject_name}</p>
+            <p>Number of Posts: {this.state.postDetails.length}</p>
+
+            {this.state.data.map((post) => 
+                <Post 
+                    posttitle={post.title}
+                    postbody={post.body}
+                />
+            )}
                 {this.state.postDetails.map((post) =>
-                <div>
+                <div key={this.state.currentSubject.key} >
                     <Post
+                        key={post.post_id}
                         title = {post.title}
                         body = {post.body}
                         subjectID = {post.subject_id}
@@ -74,7 +90,13 @@ export default class GetPosts extends React.Component {
                     />
                 </div>
                 )}
-                
+                <hr/>
+
+                <CreatePost
+                    subject_id = {this.state.subject}
+                />
+
+             
             </section>
         )
     }

@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import SubjectDetails from "./SubjectDetails";
 import Subject from "./Subject";
+import GetPosts from "../Posts/CreatePost/GetPosts";
 
 export default class SubjectList extends React.Component {
     constructor(props){
@@ -37,7 +38,6 @@ export default class SubjectList extends React.Component {
                 curentSubject: mainSubjectData
             })
         })
-        console.log(this)
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -62,17 +62,28 @@ export default class SubjectList extends React.Component {
 
         return(
             <section>
-                <Subject
-                    title={this.state.title}>
-                </Subject>
 
-            {this.state.currentSubject.map((info) => {
+            <p>{this.state.data.length}</p>
+
+            {this.state.data.map((info) => 
+                <Subject
+                    title={info.title}>
+                </Subject>
+            )}
+                
+
+            {this.state.currentSubject.map((info) => 
                 <SubjectDetails
                 title={info.title}
                 id={info.subject_id}
                 />
-                    })}
-                
+            )}
+
+            {this.state.currentSubject.map((info) => 
+                <GetPosts 
+                    subject_id = {info.subject_id}
+                />
+            )}
             </section>
         )
     }
