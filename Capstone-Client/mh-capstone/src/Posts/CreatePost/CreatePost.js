@@ -6,7 +6,8 @@ export default class CreatePost extends React.Component {
     state = {
         title: '',
         body: '',
-        subject_id: ''
+        subject_id: '',
+        username: ''
     }
 
     handleChange = (event) => {
@@ -20,12 +21,12 @@ export default class CreatePost extends React.Component {
     };
 
     handleSubmit = (event) => {
-        event.preventDefault();
 
         axios.post('http://localhost:5051/posts', {
             title: this.state.title,
             body: this.state.body,
-            subject_id: this.props.subject_id
+            subject_id: this.props.subject_id,
+            name: this.state.username
         });
     };
 
@@ -40,6 +41,15 @@ export default class CreatePost extends React.Component {
             <section>
 
             <form onSubmit={this.handleSubmit}>
+
+                <label>Username</label>
+                <input 
+                    type='text'
+                    name='username'
+                    onChange={this.handleChange}
+                    value={this.state.postName}
+                    placeholder="username"
+                    />
 
                 <label>Post Title</label>
                 <input

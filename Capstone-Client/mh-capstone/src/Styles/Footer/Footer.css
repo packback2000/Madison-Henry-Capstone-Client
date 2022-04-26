@@ -1,17 +1,24 @@
 .footer {
-  width: 100%;
+  background-color: #682b32;
+  border-bottom: solid #f6e8c9;
+  border-width: thin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: purple;
-  color: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
+  color: #f6e8c9;
+  width: 100%;
 }
 
 .footer h1 {

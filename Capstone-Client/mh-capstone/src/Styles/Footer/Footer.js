@@ -1,6 +1,8 @@
 
 import '../Footer/Footer.css';
 import React from "react";
+import AboutPage from '../../Pages/AboutPage';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -17,6 +19,8 @@ export default function Footer() {
                 <li>General</li>
                 </ul>
             </div>
+
+            <div><Link to={'/about'}>About Us</Link></div>
         </section>
     )
 }

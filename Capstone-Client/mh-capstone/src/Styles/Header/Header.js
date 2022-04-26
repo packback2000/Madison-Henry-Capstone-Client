@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 export default function Header() {
     return(
         <section className="header">
+
+
             <Link to={`/subjects`}>
             <h1>CanHack</h1>
             </Link>
@@ -15,5 +17,7 @@ export default function Header() {
                     type='text'
                 />
             </form>
+            <p>Login</p>
+
         </section>
 )}

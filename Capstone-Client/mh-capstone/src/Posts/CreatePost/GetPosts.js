@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Post from '../Post';
 import CreatePost from './CreatePost';
+import '../CreatePost/GetPosts.css';
 
 export default class GetPosts extends React.Component {
 
@@ -17,10 +18,14 @@ export default class GetPosts extends React.Component {
             id: '',
             subject: '',
             body: '',
-            subject_name: ''
+            subject_name: '',
+            liked: null,
+            setLiked: null,
+            clicked: false,
+            setClicked: false
         }
     }
-
+      
     fetchSubjectDetails() {
         axios
         .get('http://localhost:5051' + window.location.pathname)
@@ -50,9 +55,16 @@ export default class GetPosts extends React.Component {
         .get('http://localhost:5051' + window.location.pathname + '/posts' )
         .then(response => {
             let details = response.data
+            if (window.location.href !== 'posts/undefined/comments') {
             this.setState({
                 postDetails: details,
             })
+        }
+        else {
+            this.setState({
+                postDetails: ''
+            })
+        }
             })
             this.setState({
               subject:  window.location.pathname.split('/')[2], 
@@ -60,6 +72,8 @@ export default class GetPosts extends React.Component {
             })
            
     }
+
+    
 
 
     componentWillUnmount() {
@@ -69,14 +83,14 @@ export default class GetPosts extends React.Component {
     render() {
         return(
             <section className='post-list'>
-
-            <p>{this.state.subject_name}</p>
-            <p>Number of Posts: {this.state.postDetails.length}</p>
-
+            <p className='subject-name'>{this.state.subject_name}</p>
+            <p className='number-of-posts'>Number of Posts: {this.state.postDetails.length}</p>
             {this.state.data.map((post) => 
                 <Post 
                     posttitle={post.title}
                     postbody={post.body}
+                    posttime={post.lastUpdated}
+                    username={post.username}
                 />
             )}
                 {this.state.postDetails.map((post) =>
@@ -87,16 +101,15 @@ export default class GetPosts extends React.Component {
                         body = {post.body}
                         subjectID = {post.subject_id}
                         postID = {post.post_id}
+                        posttime={post.lastUpdated}
+                        username={post.name}
                     />
                 </div>
                 )}
                 <hr/>
-
                 <CreatePost
                     subject_id = {this.state.subject}
                 />
-
-             
             </section>
         )
     }

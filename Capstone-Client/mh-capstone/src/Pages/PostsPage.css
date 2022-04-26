@@ -1,0 +1,32 @@
+.homepage {
+  background-color: #682b32;
+  position: fixed;
+  width: 100%;
+}
+
+.homepage div {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.homepage a {
+  color: #682b32;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.homepage .links {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #f6e8c9;
+  border-radius: 3px;
+  border: 1px solid #cc4f52;
+}
+/*# sourceMappingURL=PostsPage.css.map */

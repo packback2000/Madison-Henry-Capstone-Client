@@ -1,29 +1,23 @@
 .header {
-    width: 100%;
+
+    background-color: #682b32;
+    color: #f6e8c9;
+    border-width: thin;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: purple;
-    color: white;
-    
-    
-
+    justify-content: space-evenly;
+    padding: 1rem;
+    width: 100%;
     a {
         h1 {
-            padding-left: 2rem;
-        }
-        text-decoration: none;
-        color: white;   
-    }
-
-    form {
-        margin-right: 1.5rem;
-        padding: 0.5rem;
-        
-        input {
-            border-radius: 8px;
-            border: 1px solid black;
             padding: 0.25rem;
+            color: #f6e8c9;
+            border-radius: 4px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
         }
+        text-decoration: none;   
     }
 }

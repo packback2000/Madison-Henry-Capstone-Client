@@ -1,10 +1,16 @@
 .footer {
-    width: 100%;
+    background-color: #682b32;
+    border-bottom: solid #f6e8c9;
+    border-width: thin;
     display: flex;
-    flex-direction: column;
-    background: purple;
-    color: white;
     align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    flex-direction: column;
+    position:relative;
+    color: #f6e8c9;
+    width: 100%;
+
     
     h1 {
         padding: 0.1rem;

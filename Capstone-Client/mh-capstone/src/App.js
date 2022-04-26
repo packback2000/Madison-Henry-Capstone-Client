@@ -6,6 +6,7 @@ import Header from './Styles/Header/Header';
 import Footer from "./Styles/Footer/Footer";
 import AboutPage from "./Pages/AboutPage";
 import HomePage from "./Pages/PostsPage";
+import NewPosts from "./Posts/NewPosts/NewPosts";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/subjects' element={<SubjectDetails/>}/>
         <Route path='/subjects/:subject_name' element={<GetPosts/>} />
         <Route path='/posts/:post_id/comments' element={<CommentList/>}/>
+        <Route path='/:userID' element={<NewPosts/>}/>
       </Routes>
       <Footer />
       </BrowserRouter>

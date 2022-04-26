@@ -1,15 +1,17 @@
 table {
     width: 100%;
+    background-color: #682b32;
 
     a {
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        color: black;
-        border: 0.5px solid black;
+        color: #6b3434;
+        border: 0.5px solid #cc4f52;
         width: 100%;
         padding-top: 1rem;
         padding-bottom: 1rem;
+        background-color: #f6e8c9;
     }
 }

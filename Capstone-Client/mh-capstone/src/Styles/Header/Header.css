@@ -1,35 +1,34 @@
 .header {
-  width: 100%;
+  background-color: #682b32;
+  color: #f6e8c9;
+  border-width: thin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background: purple;
-  color: white;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem;
+  width: 100%;
 }
 
 .header a {
   text-decoration: none;
-  color: white;
 }
 
 .header a h1 {
-  padding-left: 2rem;
-}
-
-.header form {
-  margin-right: 1.5rem;
-  padding: 0.5rem;
-}
-
-.header form input {
-  border-radius: 8px;
-  border: 1px solid black;
   padding: 0.25rem;
+  color: #f6e8c9;
+  border-radius: 4px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=Header.css.map */

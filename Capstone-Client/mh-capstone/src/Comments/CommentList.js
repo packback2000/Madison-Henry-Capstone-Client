@@ -2,6 +2,8 @@ import axios from "axios";
 import React from "react";
 import Comment from "./Comment";
 import CreateComment from "./CreateComments";
+import "./CommentList.css";
+import { Link } from "react-router-dom";
 
 export default class CommentList extends React.Component {
     constructor(props) {
@@ -15,7 +17,9 @@ export default class CommentList extends React.Component {
             comment_id: '',
             commentDetails: [], 
             postBody: '',
-            postTitle: ''
+            postTitle: '',
+            post_id: '',
+            postUsername: ''
         }
     }
 
@@ -28,9 +32,11 @@ export default class CommentList extends React.Component {
             this.setState({
                 currentPost: postDetails,
                 postBody: postDetails.body,
-                postTitle: postDetails.title
+                postTitle: postDetails.title,
+                post_id: postDetails.post_id,
+                postUsername: postDetails.name
             })
-        })
+        }) 
     }
 
     fetchCommentDetails() {
@@ -64,6 +70,9 @@ export default class CommentList extends React.Component {
     render() {
         return(
             <section className="comment-section">
+                <Link to={`/${this.state.postUsername}`}>
+                    <p>{this.state.postUsername}</p>
+                </Link>
                 <p>{this.state.postTitle}</p>
                 <p>{this.state.postBody}</p>
                 <hr/>
@@ -71,10 +80,16 @@ export default class CommentList extends React.Component {
                     <Comment 
                         body = {comment.body}
                         post_id = {comment.post_id}
+                        comment_id = {comment.comment_id}
+                        likes={comment.likes}
+                        timestamp = {comment.lastUpdated}
+                        username={comment.name}
                     />
                 )}
-                
-                <CreateComment/>
+
+                <CreateComment
+                    post_id = {this.state.post_id}
+                />
             </section>
         )
     }
