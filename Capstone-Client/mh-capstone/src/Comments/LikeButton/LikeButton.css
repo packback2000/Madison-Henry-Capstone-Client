@@ -5,4 +5,12 @@
   width: 20%;
   color: #F6E8C9;
 }
+
+.comment_button {
+  background-color: #cc4f52;
+  border: 0px;
+  border-radius: 1rem;
+  width: 100%;
+  color: #F6E8C9;
+}
 /*# sourceMappingURL=LikeButton.css.map */

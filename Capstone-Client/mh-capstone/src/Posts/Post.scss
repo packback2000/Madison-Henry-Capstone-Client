@@ -5,6 +5,7 @@
     color: #6b3434;
     border-radius: 1rem;
 
+
     .name-date {
         display: flex;
         justify-content: space-between;
@@ -33,6 +34,7 @@
     margin: 0px;
     padding: 1px;
     height: 100%;
+    overflow: scroll;
 }
 
 .subject-name {

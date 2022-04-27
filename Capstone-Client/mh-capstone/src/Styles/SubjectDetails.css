@@ -3,6 +3,13 @@ table {
   background-color: #682b32;
 }
 
+@media (min-width: 450px) {
+  table {
+    width: 70%;
+    margin: auto;
+  }
+}
+
 table a {
   display: -webkit-box;
   display: -ms-flexbox;

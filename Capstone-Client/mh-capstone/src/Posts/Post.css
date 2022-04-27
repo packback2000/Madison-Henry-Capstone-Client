@@ -36,6 +36,7 @@
   margin: 0px;
   padding: 1px;
   height: 100%;
+  overflow: scroll;
 }
 
 .subject-name {

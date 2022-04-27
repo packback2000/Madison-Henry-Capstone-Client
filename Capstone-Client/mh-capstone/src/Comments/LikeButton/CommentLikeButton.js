@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import './LikeButton.css'
 
 function CommentLikeButton(props) {
 
@@ -17,7 +18,7 @@ function CommentLikeButton(props) {
 
 
   return (
-    <button
+    <button className="comment_button"
       onClick={(event) => {
         setLiked(!liked);
         setClicked(true);
@@ -25,8 +26,8 @@ function CommentLikeButton(props) {
       }}
       onAnimationEnd={() => setClicked(false)}
     >
-      <div className="like-button">
-        <span>Like</span> 
+      <div >
+        <p>Like</p> 
         <p>{newlikes}</p>
       </div>
     </button>

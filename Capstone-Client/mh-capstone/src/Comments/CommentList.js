@@ -70,12 +70,14 @@ export default class CommentList extends React.Component {
     render() {
         return(
             <section className="comment-section">
-                <Link to={`/${this.state.postUsername}`}>
-                    <p>{this.state.postUsername}</p>
-                </Link>
-                <p>{this.state.postTitle}</p>
-                <p>{this.state.postBody}</p>
+                <div className="comment-section_post-elements">
+                    <p>{this.state.postTitle}</p>
+                    <p>{this.state.postBody}</p>
+                    <p>posted by: {this.state.postUsername}</p>
+                </div>
+
                 <hr/>
+
                 {this.state.commentDetails.map((comment) => 
                     <Comment 
                         body = {comment.body}

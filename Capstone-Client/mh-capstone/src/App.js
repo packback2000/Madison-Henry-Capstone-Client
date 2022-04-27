@@ -19,7 +19,7 @@ function App() {
         <Route path='/subjects' element={<SubjectDetails/>}/>
         <Route path='/subjects/:subject_name' element={<GetPosts/>} />
         <Route path='/posts/:post_id/comments' element={<CommentList/>}/>
-        <Route path='/:userID' element={<NewPosts/>}/>
+        <Route path='/new' element={<NewPosts/>}/>
       </Routes>
       <Footer />
       </BrowserRouter>

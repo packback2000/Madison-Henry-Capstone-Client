@@ -1,6 +1,5 @@
 .footer {
   background-color: #682b32;
-  border-bottom: solid #f6e8c9;
   border-width: thin;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,14 +10,23 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
   color: #f6e8c9;
+  bottom: 1rem;
+  margin: 0rem;
   width: 100%;
+  padding: 0rem;
+}
+
+@media (max-width: 450px) {
+  .footer {
+    border-top: 0.05rem solid #f6e8c9;
+    margin-top: 1rem;
+  }
 }
 
 .footer h1 {
@@ -35,5 +43,25 @@
           align-items: center;
   padding: 0rem;
   font-size: x-small;
+}
+
+.footer li {
+  display: none;
+}
+
+@media (min-width: 450px) {
+  .footer li {
+    display: block;
+    padding: 1rem;
+    margin: auto;
+    width: 100%;
+    position: relative;
+    left: 0px;
+  }
+}
+
+.footer a {
+  color: #f6e8c9;
+  text-decoration: none;
 }
 /*# sourceMappingURL=Footer.css.map */

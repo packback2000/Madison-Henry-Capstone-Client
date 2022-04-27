@@ -42,7 +42,7 @@ export default class SubjectDetails extends React.Component {
             )
         })
         return(
-            <section>
+            <section className="subject_table">
                 {displayData}
             </section>
         )

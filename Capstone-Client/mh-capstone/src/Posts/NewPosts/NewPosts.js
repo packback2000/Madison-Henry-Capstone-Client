@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 export default class NewPosts extends React.Component {
     constructor(props){
@@ -13,15 +14,11 @@ export default class NewPosts extends React.Component {
         .get('http://localhost:5051/posts')
         .then((response) => {
             const postData = response.data;
-            let username = window.location.pathname.split('/')[1];
-            postData.map((info) => {
-                if (info.name === username) {
+            
                     this.setState({
-                        data: info
+                        data: postData
                     })
-                }
-            })
-        })
+                })
     }
 
     componentDidMount() {
@@ -30,13 +27,14 @@ export default class NewPosts extends React.Component {
 
 
 render() {    
-    console.log(this.state.data)
     const postData = this.state.data.map((info) => {
         return(
             <table>
                 <tbody>
                     <tr>
-                        <td>{info.body}</td>
+                        <Link to={`/posts/${info.post_id}/comments`}>
+                        <td>{info.title}</td>
+                        </Link>
                     </tr>
                 </tbody>
             </table> 

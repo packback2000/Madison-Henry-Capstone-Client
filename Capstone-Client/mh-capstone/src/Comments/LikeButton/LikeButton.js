@@ -38,8 +38,8 @@ function LikeButton(props) {
       className='button'
     >
       <div className="like-button">
-        <span>Like</span> 
-        <p>{numberOfLikes}</p>
+        <span>Like {numberOfLikes}</span> 
+       
       </div>
     </button>
   );

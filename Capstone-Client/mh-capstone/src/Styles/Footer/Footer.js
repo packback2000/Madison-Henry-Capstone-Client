@@ -1,22 +1,18 @@
-
 import '../Footer/Footer.css';
 import React from "react";
-import AboutPage from '../../Pages/AboutPage';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
         <section className='footer'> 
-            <h1>Footer</h1>
-
             <div className='footer-nav'>
                 <ul>
-                <li>Web Security</li>
-                <li>Cryptography</li>
-                <li>Binary Exploitation</li>
-                <li>Digital Forensics</li>
-                <li>Reverse Engineering</li>
-                <li>General</li>
+                <li><Link to='/subjects/1'>Web Security</Link></li>
+                <li><Link to='/subjects/2'>Cryptography</Link></li>
+                <li><Link to='/subjects/5'>Binary Exploitation</Link></li>
+                <li><Link to='/subjects/3'>Digital Forensics</Link></li>
+                <li><Link to='/subjects/4'>Reverse Engineering</Link></li>
+                <li><Link to='/subjects/6'>General</Link></li>
                 </ul>
             </div>
 

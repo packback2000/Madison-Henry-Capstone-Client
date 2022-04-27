@@ -7,7 +7,25 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 1rem;
-    width: 100%;
+
+    @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 0.05rem solid #f6e8c9;
+        a {
+            margin: 0rem;
+
+            h1 {
+                margin: 0rem;
+            }
+        }
+
+        p {
+            margin: 0rem;
+        }
+    }
+    
+    
     a {
         h1 {
             padding: 0.25rem;

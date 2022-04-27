@@ -1,7 +1,13 @@
 .homepage {
   background-color: #682b32;
-  position: fixed;
+  margin: auto;
   width: 100%;
+}
+
+@media (min-width: 450px) {
+  .homepage {
+    width: 70%;
+  }
 }
 
 .homepage div {
@@ -16,7 +22,6 @@
 }
 
 .homepage .links {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

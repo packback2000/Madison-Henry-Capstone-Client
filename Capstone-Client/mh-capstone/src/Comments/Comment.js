@@ -1,6 +1,6 @@
 import React from "react";
 import CommentLikeButton from "./LikeButton/CommentLikeButton";
-import { Link } from "react-router-dom";
+import './Comment.css'
 
 export default function Comment(props) {
     console.log(props)
@@ -15,11 +15,13 @@ export default function Comment(props) {
     }
 
     return (
-        <div>
-            <Link to={`/${props.username}`}><p>{props.username}</p></Link>
-            <p>{props.body}</p>
-            <p>{formatMyDate(props.timestamp)}</p>
-
+        <div className='comment'>
+            <div className="comment-elements">
+                <p>{props.username}</p>
+                <p>{props.body}</p>
+                <p>{formatMyDate(props.timestamp)}</p>
+            </div>
+            
             <CommentLikeButton 
                 comment_id = {props.comment_id}
                 likes = {props.likes}

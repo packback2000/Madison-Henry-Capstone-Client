@@ -1,16 +1,21 @@
 .footer {
     background-color: #682b32;
-    border-bottom: solid #f6e8c9;
     border-width: thin;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 1rem;
     flex-direction: column;
-    position:relative;
+    position: relative;
     color: #f6e8c9;
+    bottom: 1rem;
+    margin: 0rem;
     width: 100%;
+    padding: 0rem;
 
+    @media (max-width: 450px) {
+        border-top: 0.05rem solid #f6e8c9;
+        margin-top: 1rem;
+    }
     
     h1 {
         padding: 0.1rem;
@@ -22,5 +27,24 @@
         align-items: center;
         padding: 0rem;
         font-size: x-small;
+    }
+
+    li {
+        display: none;
+
+        @media (min-width:450px) {
+            display: block;
+            padding: 1rem;
+            margin: auto;
+            width: 100%;
+            position: relative;
+            left: 0px;
+        }
+        
+    }
+
+    a {
+        color: #f6e8c9;
+        text-decoration: none;
     }
 }

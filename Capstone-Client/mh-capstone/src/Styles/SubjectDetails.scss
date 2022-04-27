@@ -2,6 +2,11 @@ table {
     width: 100%;
     background-color: #682b32;
 
+    @media (min-width: 450px) {
+        width: 70%;
+        margin: auto;
+    }
+
     a {
         display: flex;
         align-items: center;
@@ -15,3 +20,5 @@ table {
         background-color: #f6e8c9;
     }
 }
+
+
