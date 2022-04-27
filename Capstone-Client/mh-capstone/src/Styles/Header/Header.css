@@ -52,4 +52,8 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.header a p {
+  color: #f6e8c9;
+}
 /*# sourceMappingURL=Header.css.map */

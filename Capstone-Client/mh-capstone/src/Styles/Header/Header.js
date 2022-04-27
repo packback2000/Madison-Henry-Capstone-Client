@@ -1,7 +1,6 @@
 import '../Header/Header.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Arrow from '../Assets/Arrow.png'
 
 export default function Header() {
 
@@ -17,13 +16,9 @@ export default function Header() {
             <h1>Cyber Questions</h1>
             </Link>
             
-            <form>
-                <input
-                    placeholder='Search...'
-                    type='text'
-                />
-            </form>
-            <p>Login</p>
+            <Link to='/search'><p>Search</p></Link>
+            
+
 
         </section>
 )}

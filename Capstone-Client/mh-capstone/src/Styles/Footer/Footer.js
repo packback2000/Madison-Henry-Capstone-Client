@@ -17,6 +17,7 @@ export default function Footer() {
             </div>
 
             <div><Link to={'/about'}>About Us</Link></div>
+            <div><Link to={'/new'}>All Posts</Link></div>
         </section>
     )
 }

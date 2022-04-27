@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "axios": "^0.26.1",
-    "form-handler": "^2.2.1"
+    "form-handler": "^2.2.1",
+    "react-minesweeper": "^1.0.2"
   }
 }

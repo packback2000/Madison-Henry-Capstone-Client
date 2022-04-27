@@ -7,6 +7,9 @@ import Footer from "./Styles/Footer/Footer";
 import AboutPage from "./Pages/AboutPage";
 import HomePage from "./Pages/PostsPage";
 import NewPosts from "./Posts/NewPosts/NewPosts";
+import SearchPage from "./Styles/Header/SearchPage";
+import "react-minesweeper/lib/minesweeper.css";
+import Minesweeper from "react-minesweeper";
 
 function App() {
   return (
@@ -20,6 +23,8 @@ function App() {
         <Route path='/subjects/:subject_name' element={<GetPosts/>} />
         <Route path='/posts/:post_id/comments' element={<CommentList/>}/>
         <Route path='/new' element={<NewPosts/>}/>
+        <Route path='/search' element={<SearchPage/>} />
+        <Route path='/minesweeper' element={<Minesweeper/>} />
       </Routes>
       <Footer />
       </BrowserRouter>
