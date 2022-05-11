@@ -10,18 +10,21 @@ Installation
 Install my-project with npm
 
   npm install https://github.com/packback2000/Madison-Henry-Capstone-Client.git
-  cd mh-capstone
+  cd capstone/mh-capstone
   npm start
+  
 Demo
-https://www.loom.com/share/7893158c26f74433aa347428c0268499
+  https://www.loom.com/share/7893158c26f74433aa347428c0268499
 
 Run Locally
-Clone the project
+  Clone the project
 
     gh repo clone packback2000/Madison-Henry-Capstone-Client
-Go to the project directory
+  
+  Go to the project directory
 
-  cd mh-capstone
-Start the server
+  cd capstone/mh-capstone
 
-  npm run start
+  Start the server
+
+    npm run start
