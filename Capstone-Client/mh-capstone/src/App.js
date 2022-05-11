@@ -25,6 +25,7 @@ function App() {
         <Route path='/new' element={<NewPosts/>}/>
         <Route path='/search' element={<SearchPage/>} />
         <Route path='/minesweeper' element={<Minesweeper/>} />
+        <Route path="*" element={<Minesweeper/>} />
       </Routes>
       <Footer />
       </BrowserRouter>
