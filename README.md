@@ -17,6 +17,7 @@ Install my-project with npm
 
 ```bash
   npm install https://github.com/packback2000/Madison-Henry-Capstone-Client.git
+  cd capstone-client
   cd mh-capstone
   npm start
 ```
