@@ -1,0 +1,59 @@
+.header {
+  background-color: #682b32;
+  color: #f6e8c9;
+  border-width: thin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem;
+}
+
+@media (max-width: 450px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-bottom: 0.05rem solid #f6e8c9;
+  }
+  .header a {
+    margin: 0rem;
+  }
+  .header a h1 {
+    margin: 0rem;
+  }
+  .header p {
+    margin: 0rem;
+  }
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header a h1 {
+  padding: 0.25rem;
+  color: #f6e8c9;
+  border-radius: 4px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header a p {
+  color: #f6e8c9;
+}
+/*# sourceMappingURL=Header.css.map */

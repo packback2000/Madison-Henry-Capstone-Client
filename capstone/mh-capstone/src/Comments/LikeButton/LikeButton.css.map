@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACJ,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,GAAG;EACX,aAAa,EAAE,IAAI;EACnB,KAAK,EAAE,GAAG;EACV,KAAK,EAAE,OAAO;CACjB;;AAED,AAAA,eAAe,CAAC;EACZ,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,GAAG;EACX,aAAa,EAAE,IAAI;EACnB,KAAK,EAAE,IAAI;EACX,KAAK,EAAE,OAAO;CACjB",
+    "sources": [
+        "LikeButton.scss"
+    ],
+    "names": [],
+    "file": "LikeButton.css"
+}

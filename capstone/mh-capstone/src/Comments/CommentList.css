@@ -1,0 +1,17 @@
+.comment-section {
+  background-color: #682b32;
+  color: #f6e8c9;
+  height: 100%;
+  border: #cc4f52;
+  width: 100%;
+  position: relative;
+}
+
+.comment-section .comment-section_post-elements {
+  padding-left: 3rem;
+}
+
+.comment-section .comment-section_comment-elements {
+  padding-left: 1rem;
+}
+/*# sourceMappingURL=CommentList.css.map */

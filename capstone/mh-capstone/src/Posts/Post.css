@@ -1,0 +1,107 @@
+.main-post__data {
+  margin: 2rem 2rem 0rem 2rem;
+  background-color: #f6e8c9;
+  color: #6b3434;
+  border-radius: 1rem;
+}
+
+.main-post__data .name-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-decoration: none;
+  border-bottom: 1px solid #cc4f52;
+  padding: 0.5rem;
+}
+
+.main-post__data .body {
+  padding: 1rem;
+}
+
+.main-post__data .title {
+  margin: 0px;
+  border-bottom: 1px solid #cc4f52;
+  padding: 1rem;
+}
+
+.main-post__link {
+  text-decoration: none;
+}
+
+.post-list {
+  background-color: #f6e8c9;
+  margin: 0px;
+  padding: 1px;
+  height: 100%;
+  overflow: scroll;
+}
+
+.subject-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: larger;
+}
+
+.number-of-posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: large;
+}
+
+.button {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.button::after {
+  background-color: white;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem;
+}
+
+form input {
+  padding: 0.5rem;
+  background-color: #f6e8c9;
+  border: 1px solid #6b3434;
+  border-radius: 0.5rem;
+}
+
+form button {
+  border-radius: 4px;
+  background-color: #cc4f52;
+  color: #f6e8c9;
+  border: 0px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+table {
+  padding: 1rem;
+}
+/*# sourceMappingURL=Post.css.map */

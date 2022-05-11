@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,aAAa,CAAC;EACV,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,SAAS;CAenB;;AAjBD,AAGI,aAHS,CAGT,CAAC,CAAC;EACE,eAAe,EAAE,IAAI;EACrB,KAAK,EAAE,SAAS;CACnB;;AANL,AAQQ,aARK,CAOT,SAAS,CACL,mBAAmB,CAAC;EAChB,MAAM,EAAE,mBAAmB;EAC3B,MAAM,EAAE,MAAM;CACjB;;AAXT,AAcI,aAdS,CAcT,EAAE,CAAC;EACC,MAAM,EAAE,IAAI;CACf",
-    "sources": [
-        "SubjectList.scss"
-    ],
-    "names": [],
-    "file": "SubjectList.css"
-}

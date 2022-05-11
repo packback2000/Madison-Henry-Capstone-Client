@@ -1,0 +1,29 @@
+.search-section {
+    color: #f6e8c9;
+    padding: 1rem;
+
+    a {
+        text-decoration: none;
+    }
+
+    
+    .searched-posts {
+        color: #f6e8c9;
+    }
+
+    .search-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-input__container {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .search-post__links {
+        display: flex;
+        justify-content: center;
+    }
+}
